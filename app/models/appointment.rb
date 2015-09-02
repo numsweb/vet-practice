@@ -8,4 +8,7 @@ class Appointment < ActiveRecord::Base
   validates_presence_of :reason_for_visit
   
   
+  scope :most_recent, lambda { order("appointments.created_at DESC").limit(1) }
+  
+  
 end

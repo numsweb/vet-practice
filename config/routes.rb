@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :customers
 
   get 'home/index'
+  
+  get 'home/show_next_appointment'
 
   resources :pets
 

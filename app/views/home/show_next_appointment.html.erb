@@ -1,0 +1,30 @@
+<%= form_for("appointments", url: home_show_next_appointment_path, :method => :get)  do |f| %>
+
+  <div class="field">
+    <b>Select Pet: </b>
+    <%= select "pet", "id", options_for_select(@pets), include_blank: true %>
+  </div>
+  
+  
+  <% unless @appointment.blank? %>
+    <table>
+      <thead>
+        <tr>
+          <th>Pet</th>
+          <th>Date of visit</th>
+          <th>Reason for visit</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><%= @appointment.pet.name %></td>
+          <td><%= @appointment.date_of_visit %></td>
+          <td><%= @appointment.reason_for_visit %></td>
+        </tr>
+        
+      </tbody>
+  
+  <% end %>
+  <%= f.submit "Show next appointment" %>
+<% end %>
