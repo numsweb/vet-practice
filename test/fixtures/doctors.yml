@@ -5,15 +5,15 @@ one:
   address: MyString
   city: MyString
   state: MyString
-  zip: MyString
+  zip: 12345
   school: MyString
-  years_in_practice: MyString
+  years_in_practice: 100
 
 two:
   name: MyString
   address: MyString
   city: MyString
   state: MyString
-  zip: MyString
+  zip: 12345
   school: MyString
-  years_in_practice: MyString
+  years_in_practice: 100

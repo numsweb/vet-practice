@@ -15,6 +15,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/new
   def new
     @appointment = Appointment.new
+    #TODO refactor
     @customers = Customer.all.collect{|c| [c.name, c.id]}
     @pets = Pet.all.collect{|p| [p.name, p.id]}
     @doctors = Doctor.all.collect{|d| [d.name, d.id]}
@@ -22,6 +23,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1/edit
   def edit
+    #TODO refactor
     @customers = Customer.all.collect{|c| [c.name, c.id]}
     @pets = Pet.all.collect{|p| [p.name, p.id]}
     @doctors = Doctor.all.collect{|d| [d.name, d.id]}
@@ -37,6 +39,10 @@ class AppointmentsController < ApplicationController
         format.html { redirect_to @appointment, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
       else
+        #TODO refactor
+        @customers = Customer.all.collect{|c| [c.name, c.id]}
+        @pets = Pet.all.collect{|p| [p.name, p.id]}
+        @doctors = Doctor.all.collect{|d| [d.name, d.id]}
         format.html { render :new }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
       end
@@ -51,6 +57,10 @@ class AppointmentsController < ApplicationController
         format.html { redirect_to @appointment, notice: 'Appointment was successfully updated.' }
         format.json { render :show, status: :ok, location: @appointment }
       else
+        #TODO refactor
+        @customers = Customer.all.collect{|c| [c.name, c.id]}
+        @pets = Pet.all.collect{|p| [p.name, p.id]}
+        @doctors = Doctor.all.collect{|d| [d.name, d.id]}
         format.html { render :edit }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
       end

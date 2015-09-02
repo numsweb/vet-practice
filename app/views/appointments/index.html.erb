@@ -4,15 +4,13 @@
   <thead>
     <tr>
       <th>Date of visit</th>
-      <th>Date,</th>
       <th>Pet</th>
       <th>Customer</th>
       <th>Doctor</th>
       <th>Pet</th>
       <th>Requires remainder</th>
       <th>Reason for visit</th>
-      <th>Text</th>
-      <th colspan="3"></th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
 
@@ -20,10 +18,10 @@
     <% @appointments.each do |appointment| %>
       <tr>
         <td><%= appointment.date_of_visit %></td>
-        <td><%= appointment.pet %></td>
-        <td><%= appointment.customer_id %></td>
-        <td><%= appointment.doctor_id %></td>
-        <td><%= appointment.pet_id %></td>
+        <td><%= appointment.pet.name %></td>
+        <td><%= appointment.customer.name %></td>
+        <td><%= appointment.doctor.name %></td>
+        <td><%= appointment.pet.name %></td>
         <td><%= appointment.requires_remainder %></td>
         <td><%= appointment.reason_for_visit %></td>
         <td><%= link_to 'Show', appointment %></td>
