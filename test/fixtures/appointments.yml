@@ -1,0 +1,18 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_of_visit: MyString
+  customer_id: MyString
+  doctor_id: MyString
+  pet_id: MyString
+  requires_remainder: MyString
+  reason_for_visit: MyString
+
+two:
+  date_of_visit: MyString
+  customer_id: MyString
+  doctor_id: MyString
+  pet_id: MyString
+  requires_remainder: MyString
+  reason_for_visit: MyString
+  
