@@ -18,17 +18,17 @@
 
   <div class="field">
     <%= f.label :pet_id %><br>
-    <%= f.select :pet_id, options_for_select(@pets)%>
+    <%= f.select :pet_id, options_for_select(@pets, @appointment.pet_id)%>
   </div>
 
   <div class="field">
     <%= f.label :customer_id %><br>
-    <%= f.select :customer_id, options_for_select(@customers) %>
+    <%= f.select :customer_id, options_for_select(@customers, @appointment.customer_id) %>
   </div>
 
   <div class="field">
     <%= f.label :doctor_id %><br>
-    <%= f.select :doctor_id, options_for_select(@doctors) %>
+    <%= f.select :doctor_id, options_for_select(@doctors, @appointment.doctor_id) %>
   </div>
 
 
